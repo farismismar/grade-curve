@@ -20,10 +20,27 @@ The code uses `numpy`, `pandas`, and `matplotlib` libraries (no check has been m
 Unlike traditional scaling methods, this methodology brings forward the following benefits:
 
 1. It does not require any assumption about the statistical distribution of the grades prior to curving (e.g., a Normal distribution).
-2. The least performing student has a chance of boosting their grade.
-3.  The code does not transform the statistical distribution of the grades.  Only the mean and variance of the distribution of the curved grades are impacted (these can be straightforward computed as $\mathbb{E}[y]$ and $\text{Var}[y]$ from the transform above).
+2. The least performing student can also benefit from the transform to boost their grade.
+3. The code does not transform the statistical distribution of the grades.  Only the mean and variance of the distribution of the curved grades are impacted (these can be straightforward computed as $\mathbb{E}[y]$ and $\text{Var}[y]$ from the transform above).
 
 ### Output
+```
+Before curving:
+---------------
+Lowest grade: 46.52.
+Highest grade: 96.12.
+Mean (+/- std): 74.54 (+/- 14.92).
+Median: 77.92 (C).
+--------------------------------------------------------------------------------
+
+After curving (epsilon = 0.05):
+-------------------------------
+Lowest grade: 48.85.
+Highest grade: 100.0.
+Mean (+/- std): 77.75 (+/- 15.38).
+Median: 81.23 (B).
+--------------------------------------------------------------------------------
+```
 ![](https://github.com/farismismar/grade-curve/blob/main/plot.png)
 
 ### Version
